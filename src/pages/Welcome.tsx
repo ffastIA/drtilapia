@@ -1,8 +1,9 @@
 import { useAuth } from "@/contexts/AuthContext";
-import { Navigate } from "react-router-dom";
+import { Navigate, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { LogOut, Bot, GraduationCap, Newspaper, BarChart3, LayoutDashboard, Lock } from "lucide-react";
+import { LogOut, Bot, GraduationCap, Newspaper, BarChart3, LayoutDashboard, Lock, Settings } from "lucide-react";
 import { useUserFeatures, type AppFeature } from "@/hooks/useUserFeatures";
+import { useAdminRole } from "@/hooks/useAdminRole";
 import logoImg from "@/assets/logo-tilapia.png";
 
 interface SectionCard {
@@ -60,6 +61,7 @@ const sections: SectionCard[] = [
 const Welcome = () => {
   const { user, loading: authLoading, signOut } = useAuth();
   const { features, displayName, loading: planLoading } = useUserFeatures();
+  const { isAdmin } = useAdminRole();
 
   if (authLoading || planLoading) {
     return (
@@ -87,6 +89,11 @@ const Welcome = () => {
               Plano {displayName}
             </span>
             <span className="text-sm text-muted-foreground hidden sm:inline">{user.email}</span>
+            {isAdmin && (
+              <Button variant="outline" size="sm" asChild className="gap-1">
+                <Link to="/admin"><Settings className="h-4 w-4" /> Admin</Link>
+              </Button>
+            )}
             <Button variant="ghost" size="sm" onClick={signOut}>
               <LogOut className="h-4 w-4" />
               <span className="hidden sm:inline">Sair</span>
