@@ -15,8 +15,8 @@ const Dashboard = () => {
       <header className="border-b bg-card">
         <div className="container flex items-center justify-between h-16">
           <div className="flex items-center gap-2">
-            <img src={logoImg} alt="TilápiaPro" className="h-8 w-8" />
-            <span className="font-display text-lg text-foreground">TilápiaPro</span>
+            <img src={logoImg} alt="Dr. Tiláp-IA" className="h-8 w-8" />
+            <span className="font-display text-lg text-foreground">Dr. Tiláp-IA</span>
           </div>
           <div className="flex items-center gap-4">
             <span className="text-sm text-muted-foreground hidden sm:inline">{user.email}</span>

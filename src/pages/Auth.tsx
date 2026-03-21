@@ -62,7 +62,7 @@ const Auth = () => {
     if (error) {
       setError(error.message);
     } else {
-      setMessage("Verifique seu e-mail para confirmar o cadastro.");
+      setMessage("Cadastro realizado! Valide seu acesso na sua caixa de e-mail antes de fazer login.");
       setTab("login");
     }
     setLoading(false);
