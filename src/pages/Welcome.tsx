@@ -1,8 +1,9 @@
 import { useAuth } from "@/contexts/AuthContext";
-import { Navigate } from "react-router-dom";
+import { Navigate, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { LogOut, Bot, GraduationCap, Newspaper, BarChart3, LayoutDashboard, Lock } from "lucide-react";
+import { LogOut, Bot, GraduationCap, Newspaper, BarChart3, LayoutDashboard, Lock, Settings } from "lucide-react";
 import { useUserFeatures, type AppFeature } from "@/hooks/useUserFeatures";
+import { useAdminRole } from "@/hooks/useAdminRole";
 import logoImg from "@/assets/logo-tilapia.png";
 
 interface SectionCard {
