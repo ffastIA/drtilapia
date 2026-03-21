@@ -18,7 +18,7 @@ const Navbar = () => {
       <div className="container flex items-center justify-between h-16">
         <a href="/" className="flex items-center gap-2">
           <img src={logoImg} alt="TilápiaPro" className="h-9 w-9" />
-          <span className="font-display text-xl text-foreground">TilápiaPro</span>
+          <span className="font-display text-xl text-foreground">Dr. Tiláp-IA</span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">

@@ -7,8 +7,8 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <img src={logoImg} alt="TilápiaPro" className="h-8 w-8 brightness-0 invert" />
-              <span className="font-display text-lg">TilápiaPro</span>
+              <img src={logoImg} alt="Dr. Tiláp-IA" className="h-8 w-8 brightness-0 invert" />
+              <span className="font-display text-lg">Dr. Tiláp-IA</span>
             </div>
             <p className="text-sm text-ocean-deep-foreground/60 leading-relaxed">
               A plataforma inteligente para o tilapicultor brasileiro.
@@ -49,7 +49,7 @@ const Footer = () => {
 
         <div className="border-t border-ocean-deep-foreground/10 pt-8 text-center">
           <p className="text-xs text-ocean-deep-foreground/40">
-            © {new Date().getFullYear()} TilápiaPro. Todos os direitos reservados.
+            © {new Date().getFullYear()} Dr. Tiláp-IA. Todos os direitos reservados.
           </p>
         </div>
       </div>

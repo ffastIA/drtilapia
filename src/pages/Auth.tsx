@@ -62,7 +62,7 @@ const Auth = () => {
     if (error) {
       setError(error.message);
     } else {
-      setMessage("Verifique seu e-mail para confirmar o cadastro.");
+      setMessage("Cadastro realizado! Valide seu acesso na sua caixa de e-mail antes de fazer login.");
       setTab("login");
     }
     setLoading(false);
@@ -101,8 +101,8 @@ const Auth = () => {
       <div className="w-full max-w-md relative z-10">
         {/* Logo */}
         <a href="/" className="flex items-center justify-center gap-3 mb-8 group">
-          <img src={logoImg} alt="TilápiaPro" className="h-11 w-11 transition-transform group-hover:scale-105" />
-          <span className="font-display text-2xl text-foreground">TilápiaPro</span>
+          <img src={logoImg} alt="Dr. Tiláp-IA" className="h-11 w-11 transition-transform group-hover:scale-105" />
+          <span className="font-display text-2xl text-foreground">Dr. Tiláp-IA</span>
         </a>
 
         {message && (
