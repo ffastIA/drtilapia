@@ -88,6 +88,11 @@ const Welcome = () => {
               Plano {displayName}
             </span>
             <span className="text-sm text-muted-foreground hidden sm:inline">{user.email}</span>
+            {isAdmin && (
+              <Button variant="outline" size="sm" asChild className="gap-1">
+                <Link to="/admin"><Settings className="h-4 w-4" /> Admin</Link>
+              </Button>
+            )}
             <Button variant="ghost" size="sm" onClick={signOut}>
               <LogOut className="h-4 w-4" />
               <span className="hidden sm:inline">Sair</span>
