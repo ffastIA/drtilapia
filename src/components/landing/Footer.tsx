@@ -49,7 +49,7 @@ const Footer = () => {
 
         <div className="border-t border-ocean-deep-foreground/10 pt-8 text-center">
           <p className="text-xs text-ocean-deep-foreground/40">
-            © {new Date().getFullYear()} TilápiaPro. Todos os direitos reservados.
+            © {new Date().getFullYear()} Dr. Tiláp-IA. Todos os direitos reservados.
           </p>
         </div>
       </div>
