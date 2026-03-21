@@ -65,8 +65,12 @@ const Navbar = () => {
               </a>
             ))}
             <div className="flex gap-3 pt-2">
-              <Button variant="ghost" size="sm" className="flex-1">Entrar</Button>
-              <Button size="sm" className="flex-1">Começar Agora</Button>
+              <Button variant="ghost" size="sm" className="flex-1" asChild>
+                <Link to="/auth">Entrar</Link>
+              </Button>
+              <Button size="sm" className="flex-1" asChild>
+                <Link to="/auth">Começar Agora</Link>
+              </Button>
             </div>
           </div>
         </div>
