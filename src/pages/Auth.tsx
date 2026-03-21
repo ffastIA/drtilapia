@@ -30,7 +30,7 @@ const Auth = () => {
   }
 
   if (session) {
-    return <Navigate to="/dashboard" replace />;
+    return <Navigate to="/welcome" replace />;
   }
 
   const handleLogin = async (e: React.FormEvent) => {
