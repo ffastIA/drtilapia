@@ -61,6 +61,7 @@ const sections: SectionCard[] = [
 const Welcome = () => {
   const { user, loading: authLoading, signOut } = useAuth();
   const { features, displayName, loading: planLoading } = useUserFeatures();
+  const { isAdmin } = useAdminRole();
 
   if (authLoading || planLoading) {
     return (
