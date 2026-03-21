@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import logoImg from "@/assets/logo-tilapia.png";
@@ -33,8 +34,12 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-3">
-          <Button variant="ghost" size="sm">Entrar</Button>
-          <Button size="sm">Começar Agora</Button>
+          <Button variant="ghost" size="sm" asChild>
+            <Link to="/auth">Entrar</Link>
+          </Button>
+          <Button size="sm" asChild>
+            <Link to="/auth">Começar Agora</Link>
+          </Button>
         </div>
 
         <button
@@ -60,8 +65,12 @@ const Navbar = () => {
               </a>
             ))}
             <div className="flex gap-3 pt-2">
-              <Button variant="ghost" size="sm" className="flex-1">Entrar</Button>
-              <Button size="sm" className="flex-1">Começar Agora</Button>
+              <Button variant="ghost" size="sm" className="flex-1" asChild>
+                <Link to="/auth">Entrar</Link>
+              </Button>
+              <Button size="sm" className="flex-1" asChild>
+                <Link to="/auth">Começar Agora</Link>
+              </Button>
             </div>
           </div>
         </div>
