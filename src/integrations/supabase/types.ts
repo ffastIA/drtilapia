@@ -14,7 +14,100 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      plan_features: {
+        Row: {
+          feature: Database["public"]["Enums"]["app_feature"]
+          id: string
+          plan_id: string
+        }
+        Insert: {
+          feature: Database["public"]["Enums"]["app_feature"]
+          id?: string
+          plan_id: string
+        }
+        Update: {
+          feature?: Database["public"]["Enums"]["app_feature"]
+          id?: string
+          plan_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "plan_features_plan_id_fkey"
+            columns: ["plan_id"]
+            isOneToOne: false
+            referencedRelation: "plans"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      plans: {
+        Row: {
+          created_at: string
+          description: string | null
+          display_name: string
+          id: string
+          is_active: boolean
+          name: string
+          price_cents: number
+          sort_order: number
+        }
+        Insert: {
+          created_at?: string
+          description?: string | null
+          display_name: string
+          id?: string
+          is_active?: boolean
+          name: string
+          price_cents?: number
+          sort_order?: number
+        }
+        Update: {
+          created_at?: string
+          description?: string | null
+          display_name?: string
+          id?: string
+          is_active?: boolean
+          name?: string
+          price_cents?: number
+          sort_order?: number
+        }
+        Relationships: []
+      }
+      user_subscriptions: {
+        Row: {
+          created_at: string
+          id: string
+          plan_id: string
+          status: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          plan_id: string
+          status?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          plan_id?: string
+          status?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "user_subscriptions_plan_id_fkey"
+            columns: ["plan_id"]
+            isOneToOne: false
+            referencedRelation: "plans"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
@@ -23,7 +116,12 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      app_feature:
+        | "consultoria_ia"
+        | "minicursos"
+        | "noticias"
+        | "negocios"
+        | "workspace"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +248,14 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_feature: [
+        "consultoria_ia",
+        "minicursos",
+        "noticias",
+        "negocios",
+        "workspace",
+      ],
+    },
   },
 } as const
