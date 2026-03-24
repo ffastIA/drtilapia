@@ -13,6 +13,7 @@ import AdminLayout from "./pages/admin/AdminLayout.tsx";
 import AdminUsers from "./pages/admin/AdminUsers.tsx";
 import AdminPlans from "./pages/admin/AdminPlans.tsx";
 import AdminSettings from "./pages/admin/AdminSettings.tsx";
+import Consultoria from "./pages/Consultoria.tsx";
 
 const queryClient = new QueryClient();
 
