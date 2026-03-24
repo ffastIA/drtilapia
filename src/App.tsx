@@ -13,6 +13,7 @@ import AdminLayout from "./pages/admin/AdminLayout.tsx";
 import AdminUsers from "./pages/admin/AdminUsers.tsx";
 import AdminPlans from "./pages/admin/AdminPlans.tsx";
 import AdminSettings from "./pages/admin/AdminSettings.tsx";
+import Consultoria from "./pages/Consultoria.tsx";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
             <Route path="/reset-password" element={<ResetPassword />} />
             <Route path="/welcome" element={<Welcome />} />
             <Route path="/dashboard" element={<Welcome />} />
+            <Route path="/consultoria" element={<Consultoria />} />
             <Route path="/admin" element={<AdminLayout />}>
               <Route index element={<AdminUsers />} />
               <Route path="users" element={<AdminUsers />} />
